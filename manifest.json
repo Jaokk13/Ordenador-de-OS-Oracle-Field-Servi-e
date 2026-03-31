@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "OFS Auto Ordenador",
+  "version": "1.4",
+  "description": "Automatiza a desordenação e reordenação de atividades no Oracle Field Service.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.oraclecloud.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.oraclecloud.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
